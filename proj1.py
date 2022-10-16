@@ -243,7 +243,18 @@ while True:
           screen_counter1=1
           screens.screen1(img,screen_counter1)
 
+      if screen_counter1 == 1:
+        lmList1=hands[0]["lmList"]
         
+        if len(lmList1) != 0:
+
+          distIM=utils.distance(lmList1[8][0],lmList1[8][1],lmList1[12][0],lmList1[12][1])
+
+          if distIM < 20:
+            # print("YES")
+            pic_counter+=1
+
+
 
 
     if length_final_reset<25:
@@ -258,7 +269,7 @@ while True:
       if pic_counter==len(dir_list):
         pic_counter=0
         
-      img1=cv2.imread("imgs/"+dir_list[2])
+      img1=cv2.imread("imgs/"+dir_list[pic_counter])
       
       img1=cv2.resize(img1,current_size_of_pic)
       img1=screens.filters(img1,current_filter)
