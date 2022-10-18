@@ -90,7 +90,7 @@ screen_counter1=0
 
 
 current_pos_of_pic=[140,140]
-current_size_of_pic=[140,120]
+current_size_of_pic=[240,220]
 
 current_filter=None
 
@@ -250,7 +250,7 @@ while True:
 
           distIM=utils.distance(lmList1[8][0],lmList1[8][1],lmList1[12][0],lmList1[12][1])
 
-          if distIM < 20:
+          if distIM < 15:
             # print("YES")
             pic_counter+=1
 
